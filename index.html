@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Machine learning</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            main{
+                margin-top:  0;
+            }
+            canvas {
+                border: 0;   
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <p>
+                <a href="index.html"  class="activo">Hola</a>
+                <a href="bodypose.html">Body Pose</a>
+                <a href="bodysegmentation.html">Body Segmentation</a>
+                <a href="handpose.html">Hand Pose</a>
+                <a href="facemesh.html">Face Mesh</a>
+            </p>
+            <h1></h1>
+            <h2></h2>
+            <p id="aqui"></p>
+        </header>
+        <main></main>
+        <script>
+             var texto = {
+                saludo: ["¡Hola mundo!", "¡Hola Hola!", "¡Hola! ¿Como estás?", "¡Holaaaa!"],
+                nombre: "Me llamo Pablo Vergara",
+                motivo: "Sigo en este curso porque me he entretenido más de lo que esperaba. He empezado a ver la materia como aprender un nuevo idioma, y me emociona cada vez que logro descifrar un código y leerlo con facilidad. Además, siento que siempre estoy aprendiendo algo nuevo que me sorprende y este curso realmente está cambiando la forma en que abordaba el diseño web previo a programar."
+            };
+            var saludando, nombrando, motivando;
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                saludando = select("h1");
+                saludando.html(random(texto.saludo));
+                nombrando = select("h2");
+                nombrando.html(texto.nombre);
+                motivando = select("#aqui");
+                motivando.html(texto.motivo);
+            }
+            function draw() {
+                //repita este background en el style.css
+                background("#008B8B");
+                textSize(48);
+                text("👻", mouseX, mouseY);
+            }
+            function windowResized() {
+                //repita un mismo background en el style.css y en todos los script
+                background("#008B8B");
+                resizeCanvas(windowWidth, windowHeight);
+            }
+        </script>
+    </body>
+</html>

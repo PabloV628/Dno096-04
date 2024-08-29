@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+html,
+body {
+    /*repita un mismo background aquí y en todos los script*/
+    background:#008B8B;
+    /* cuide el contraste entre background y color */
+    color:#eee;
+     font-family: "DM Mono", monospace;
+     font-weight: 400;
+     font-style: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:  6rem;
+}
+
+canvas {
+    display: block;
+    box-shadow: 0 0 5 dimgray;
+    border: solid;
+    border-width: 10;
+    border-radius: 30px;
+}
+
+header {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    z-index: 2;
+    width: 70vw;
+}
+
+@media (orientation: landscape) {
+    header {
+        width:calc(100vw * 0.5);
+    }
+}
+
+p{
+                line-height:1.5;
+            }
+
+aqui {
+    max-width: 300px;
+}
+
+code{
+    color:#455A64;
+    font-size:1rem;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+a:hover{
+    color:#fff;
+}
+
+a.activo {
+    color:#ddd;
+    font-weight: #ddd;
+    font-weight: bold;
+    text-decoration: underline;
+}
